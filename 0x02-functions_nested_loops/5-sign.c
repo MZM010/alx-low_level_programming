@@ -21,7 +21,7 @@ int print_sign(int n)
 
 	else if (n == 0)
 	{
-		prints(0 + 48);
+		_putchar(0 + 48);
 		return (0);
 	}
 
