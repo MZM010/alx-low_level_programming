@@ -2,15 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * @a : first input
- * @b : second input
- * Description : add two numbers
- * add - add two integer together
- *
- * Return : sum of a and b
- *
- * **/
+ * add - adds two integers and returns the result
+ * @a: int to be added to b
+ * @b: int to be added to a
+ * Return: sum of a and b
+ */
+
 
 int add(int a, int b)
 {
