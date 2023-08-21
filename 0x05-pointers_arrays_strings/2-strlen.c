@@ -13,5 +13,7 @@
 
 int _strlen(char *s)
 {
-	return (strlen(*s));
+	const char *s = *s;
+	size_t length = strlen(ptr);
+	return (length);
 }
