@@ -13,7 +13,9 @@
 
 int _strlen(char *s)
 {
-	const char *s = *s;
-	size_t length = strlen(ptr);
-	return (length);
+	int count;
+
+	for (count = 0 ; *s != '\0' ; s++)
+		++count;
+	return (count);
 }
