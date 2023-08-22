@@ -18,6 +18,7 @@ void puts_half(char *str)
 
 	for (i = 0 ; str[i] != '\0' ; i++)
 		;
+	i++;
 	/* divide the length by 2 to count from the half of the string */
 
 	for (i = i / 2 ; str[i] != '\0' ; i++)
