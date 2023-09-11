@@ -1,0 +1,5 @@
+#define _OBJECT_MACRO_H
+
+#define SIZE 1024
+
+#endif /* _OBJECT_MACRO_H */
