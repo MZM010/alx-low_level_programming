@@ -14,21 +14,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t bytes;
-	char *buffer;
+	char *buffer[READ_BUF_SIZE * 8];
 
 	if (!filename || !letters)
 		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-		return (0);
 	fd = open(filename, O_RDONLY);
-	bytes = read(fd, buffer, read);
-	bytes = write(STDOUT_FILENO, buffer, bytes);
+	bytes = read(fd, &buffer[0], read);
+	bytes = write(STDOUT_FILENO, &buffer[0], bytes);
 	if (fd == -1 || bytes == -1)
-	{
-		free(buffer);
 		return (0);
-	}
 	close(fd);
 	return (bytes);
 }
